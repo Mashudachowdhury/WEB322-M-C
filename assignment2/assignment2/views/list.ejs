@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>User List</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.slice(0, 25).forEach(user => { %>
+                    <tr>
+                        <td><%= user.id %></td>
+                        <td><%= user.firstName %></td>
+                        <td><%= user.lastName %></td>
+                        <td><%= user.email %></td>
+                        <td><a href="/detail/<%= user.id %>">View Details</a></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
