@@ -42,5 +42,5 @@ yourPassword
 
 
 ## Credits
-```This project was part of the web322 class by Maryam Mohamed.```
+```This project was part of the web322 class by Mashuda.```
 
