@@ -11,7 +11,7 @@ const app = express();
 const port = 3000;
 
 // set up sequelize for postgresql db connection
-const sequelize = new Sequelize("SenecaDB", "cchand3", "4WsMO5BvjoVC", {
+const sequelize = new Sequelize("SenecaDB", "machowdhury17", "4WsMO5BvjoVC", {
   host: "ep-round-leaf-68528432-pooler.us-east-2.aws.neon.tech",
   dialect: "postgres",
   dialectOptions: {
@@ -41,6 +41,7 @@ app.set("view engine", "ejs");
 
 // use bodyparser middleware for parsing JSON requests
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // import route handlers for pages and API
 const pageRoutes = require("./routes/page.routes");

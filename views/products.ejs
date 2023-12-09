@@ -1,0 +1,49 @@
+<!-- product.ejs -->
+<html>
+
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Products</title>
+</head>
+
+<body class="container">
+    <%- include('partials/topnav.ejs') %>
+    <h1>
+        Product List
+    </h1>
+    <table class='table'>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+        </thead>
+        <tbody>
+            <% products.forEach(function(product) { %>
+                <tr>
+                    <td><a href="/products/<%= product.id %>">
+                            <%= product.id %>
+                        </a></td>
+                    <td>
+                        <%= product.name %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="/products?page=<%= page - 1 %>" aria-label="Previous">
+                    <span aria-hidden="true">&laquo; Previous</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="/products?page=<%= page + 1%>" aria-label="Next">
+                    <span aria-hidden="true">Next &raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+</body>
+
+</html>

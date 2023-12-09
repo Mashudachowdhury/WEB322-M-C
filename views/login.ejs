@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Login</title>
+</head>
+
+<body class="container">
+    <h1 class="text-center">Mashuda Chowdhury</h1>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="exampleInputUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleInputUsername" name="username" aria-describedby="usernameHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</body>
+
+</html>

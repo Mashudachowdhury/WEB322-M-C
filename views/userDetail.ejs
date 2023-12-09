@@ -1,0 +1,44 @@
+<!-- userDetail.ejs -->
+<html>
+
+<head>
+    <%- include('partials/head.ejs') %>
+    <title><%= user.firstName %></title>
+</head>
+
+<body class="container">
+    <%- include('partials/topnav.ejs') %>
+    <h1 class="text-center">User Details</h1>
+    <div>
+        <p>ID: <%= user.id %></p>
+        <p>Name: <%= user.firstName %> <%= user.lastName %></p>
+        <p>Email: <%= user.email %></p>
+        <p>DOB: <%= user.dob %></p>
+        <p>Company: <%= user.company %></p>
+        <p>Phone: <%= user.phone %></p>
+    </div>
+
+    <div>
+        <h2 class="text-center">User Orders</h2>
+        <% if (user.Orders && user.Orders.length > 0) { %>
+            <table class='table'>
+                <thead>
+                    <th>Order ID</th>
+                    <th>Product ID</th>
+                </thead>
+                <tbody>
+                    <% user.Orders.forEach(function(order) { %>
+                        <tr>
+                            <td><%= order.id %></td>
+                            <td><%= order.ProductId %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>No orders for this user.</p>
+        <% } %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!-- productDetail.ejs -->
+<html>
+
+<head>
+    <%- include('partials/head.ejs') %>
+    <title><%= product.name %></title>
+</head>
+
+<body class="container">
+    <%- include('partials/topnav.ejs') %>
+    <h1  class="text-center">Product Detail</h1>
+    <div>
+        <h2><%= product.name %></h2>
+        <p>ID: <%= product.id %></p>
+        <p>ISBN: <%= product.isbn %></p>
+        <p>Price: $<%= product.price %></p>
+        <p>Description: <%= product.description %></p>
+    </div>
+    <a href="/products" class="btn btn-primary">Go Back to Products</a>
+</body>
+
+</html>
